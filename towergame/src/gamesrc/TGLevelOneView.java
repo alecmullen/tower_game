@@ -1,5 +1,14 @@
 package gamesrc;
 
+import gamesrc.areas.InfoArea;
+import gamesrc.areas.MenuArea;
+import gamesrc.areas.l1PlayArea;
+import gamesrc.turrets.Turret;
+import gamesrc.turrets.TurretFive;
+import gamesrc.turrets.TurretFour;
+import gamesrc.turrets.TurretOne;
+import gamesrc.turrets.TurretThree;
+import gamesrc.turrets.TurretTwo;
 import jgame.Context;
 import jgame.GContainer;
 import jgame.GObject;
@@ -31,7 +40,7 @@ public class TGLevelOneView extends GContainer {
 		ia.setLocation(0, 600);
 		add(ia);
 		
-		initializeFish();
+		pal1.initializeEnemies();
 	}
 
 	public void initializeTurret(int tn) 
@@ -76,14 +85,5 @@ public class TGLevelOneView extends GContainer {
 			return null;
 		}
 	}	
-	
-	private void initializeFish()
-	{
-		for(int i = 0; i < this.pal1.getFishNum(); i++)
-		{
-			this.pal1.createFish();
-		}
-	}
-
 
 }

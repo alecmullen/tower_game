@@ -1,10 +1,11 @@
-package gamesrc;
+package gamesrc.areas;
 
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.util.List;
 
+import gamesrc.Tile;
 import jgame.GContainer;
 import jgame.GSprite;
 import jgame.ImageCache;

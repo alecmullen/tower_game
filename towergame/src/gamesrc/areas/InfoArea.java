@@ -1,4 +1,4 @@
-package gamesrc;
+package gamesrc.areas;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
