@@ -1,7 +1,8 @@
-package gamesrc;
+package gamesrc.turrets;
 
 import java.awt.Image;
 
+import gamesrc.Bullet;
 import jgame.Context;
 import jgame.GObject;
 import jgame.GSprite;
