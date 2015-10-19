@@ -8,21 +8,52 @@ import jgame.GObject;
 import jgame.GSprite;
 import jgame.controller.ConstantMovementController;
 import jgame.listener.FrameListener;
+import jgame.listener.TimerListener;
 
 public abstract class Turret extends GSprite {
+	
+	//default shootTime = 20
 	public Turret(Image image)
 	{
 		super(image);
-		this.addListener(new FrameListener() 
+		this.addListener(new TimerListener(20) 
 		{
+			@Override
+			public void invoke(GObject target, Context context)
+			{
+				fireBullet();
+			}
+		});
+		this.addListener(new FrameListener() {
 			@Override
 			public void invoke(GObject target, Context context)
 			{
 				target.face(getParent().getWidth()/2, getParent().getHeight()/2);
 				target.setRotation(target.getRotation());
-				fireBullet();
 			}
 		});
+	}
+
+	public Turret(Image image, int shootTime)
+	{
+		super(image);
+		
+		this.addListener(new TimerListener(shootTime) 
+		{
+				@Override
+				public void invoke(GObject target, Context context)
+				{
+					fireBullet();
+				}
+			});
+			this.addListener(new FrameListener() {
+				@Override
+				public void invoke(GObject target, Context context)
+				{
+					target.face(getParent().getWidth()/2, getParent().getHeight()/2);
+					target.setRotation(target.getRotation());
+				}
+			});
 	}
 	
 	public abstract Bullet createBullet();

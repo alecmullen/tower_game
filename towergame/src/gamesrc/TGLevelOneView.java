@@ -15,6 +15,7 @@ import jgame.GObject;
 import jgame.ImageCache;
 import jgame.controller.MouseLocationController;
 import jgame.listener.LocalClickListener;
+import jgame.listener.TimerListener;
 
 
 public class TGLevelOneView extends GContainer {
@@ -40,7 +41,14 @@ public class TGLevelOneView extends GContainer {
 		ia.setLocation(0, 600);
 		add(ia);
 		
-		pal1.initializeEnemies();
+		final TimerListener enemyReleaseListener = new TimerListener(100) {
+			public void invoke(GObject target, Context context)
+			{
+				pal1.initializeEnemies();
+			}
+		};
+		
+		this.addListener(enemyReleaseListener);
 	}
 
 	public void initializeTurret(int tn) 
