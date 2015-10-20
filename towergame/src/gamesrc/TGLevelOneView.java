@@ -49,6 +49,11 @@ public class TGLevelOneView extends GContainer {
 		};
 		
 		this.addListener(enemyReleaseListener);
+		
+		Home home = new Home(ImageCache.getImage("home.png"));
+		home.setLocation(500, 500);
+		home.setScale(0.1);
+		add(home);
 	}
 
 	public void initializeTurret(int tn) 
