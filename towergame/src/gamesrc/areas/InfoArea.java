@@ -11,7 +11,7 @@ public class InfoArea extends GContainer {
 	public InfoArea() {
 		setSize(800, 100);
 		this.setBackgroundColor(Color.black);
-		BufferedImage bg = ImageCache.getImage("areas/leveloneinfoarea.png");
+		BufferedImage bg = ImageCache.getImage("areas/infoarea.png");
 		GSprite gs = new GSprite(bg);
 		setBackgroundSprite(gs);
 	}

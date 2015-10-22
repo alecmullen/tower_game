@@ -14,9 +14,9 @@ public class TGMenuView extends GContainer {
 		MenuBackground mbg = new MenuBackground();
 		addAtCenter(mbg);
 		
-		GSprite none_img = ImageCache.getSprite("buttons/playnone.png");
-		GSprite hover_img = ImageCache.getSprite("buttons/playhover.png");
-		GSprite pressed_img = ImageCache.getSprite("buttons/playpressed.png");
+		GSprite none_img = ImageCache.getSprite("buttons/ibn.png");
+		GSprite hover_img = ImageCache.getSprite("buttons/ibh.png");
+		GSprite pressed_img = ImageCache.getSprite("buttons/ibp.png");
 	
 		GButton play_btn = new GButton();
 		play_btn.setStateSprite(ButtonState.NONE, none_img);

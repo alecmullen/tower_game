@@ -85,15 +85,15 @@ public class TGLevelOneView extends GContainer {
 		switch(turretNumber)
 		{
 		case 0:
-			return new TurretOne(ImageCache.getImage("turrets/d1.png"));
+			return new TurretOne(ImageCache.getImage("towers/t1.png"));
 		case 1:
-			return new TurretTwo(ImageCache.getImage("turrets/d2.png"));
+			return new TurretTwo(ImageCache.getImage("towers/t2.png"));
 		case 2:
-			return new TurretThree(ImageCache.getImage("turrets/d3.png"));
+			return new TurretThree(ImageCache.getImage("towers/t3.png"));
 		case 3:
-			return new TurretFour(ImageCache.getImage("turrets/d4.png"));
+			return new TurretFour(ImageCache.getImage("towers/t4.png"));
 		case 4:
-			return new TurretFive(ImageCache.getImage("turrets/d5.png"));
+			return new TurretFive(ImageCache.getImage("towers/t5.png"));
 		default:
 			return null;
 		}

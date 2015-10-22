@@ -10,8 +10,8 @@ import jgame.SoundManager;
 public class TowerGame extends Game {
 
 	public static void main(String[] args) {
-		ImageCache.create(TowerGame.class, "/tgrsc/tgimages/");
-		SoundManager.create(TowerGame.class, "/tgrsc/tgsounds/");
+		ImageCache.create(TowerGame.class, "/rsc/");
+		SoundManager.create(TowerGame.class, "/rsc/");
 		TowerGame tg = new TowerGame();
 		tg.startGame();
 	}

@@ -15,7 +15,7 @@ public class MenuArea extends GContainer {
 	public MenuArea() {
 		setSize(100, 600);
 		this.setBackgroundColor(Color.black);
-		BufferedImage bg = ImageCache.getImage("areas/levelonemenuarea.png");
+		BufferedImage bg = ImageCache.getImage("areas/menuarea.png");
 		GSprite gs = new GSprite(bg);
 		setBackgroundSprite(gs);
 		
@@ -25,7 +25,7 @@ public class MenuArea extends GContainer {
 		}
 	}
 	
-	List <Image> tileImages = ImageCache.getSequentialImages("turrets/d", 1, 5, ".png");
+	List <Image> tileImages = ImageCache.getSequentialImages("towers/t", 1, 5, ".png");
 	
 	private void setTile(int i)
 	{

@@ -22,7 +22,7 @@ public class l1PlayArea extends GContainer
 	{
 		setSize(800, 600);
 		this.setBackgroundColor(Color.black);
-		BufferedImage bg = ImageCache.getImage("areas/leveloneplayarea.png");
+		BufferedImage bg = ImageCache.getImage("areas/playarea.png");
 		GSprite gs = new GSprite(bg);
 		setBackgroundSprite(gs);
 	}
