@@ -27,4 +27,3 @@ public class TGMenuView extends GContainer {
 		add(play_btn);
 	}
 }
-
