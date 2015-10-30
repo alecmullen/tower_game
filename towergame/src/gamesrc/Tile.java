@@ -10,32 +10,63 @@ import jgame.ImageCache;
 import jgame.listener.ButtonListener;
 
 public class Tile extends GButton {
-	
-	public Tile(Image img, final int turretNumber)
-	{
+	public Tile(Image image, final int tn) {
+		setSize(90,90);
 		
-		setSize(90, 90);
+		GSprite sNone = new GSprite(ImageCache.forClass(TowerGame.class).get("buttons/tbn.png"));
+		GSprite sHover = new GSprite(ImageCache.forClass(TowerGame.class).get("buttons/tbh.png"));
+		GSprite sPressed = new GSprite(ImageCache.forClass(TowerGame.class).get("buttons/tbp.png"));
 		
-		GSprite sNone = ImageCache.getSprite("buttons/tbn.png");
-		GSprite sHover = ImageCache.getSprite("buttons/tbh.png");
-		GSprite sPressed = ImageCache.getSprite("buttons/tbp.png");
-
 		setStateSprite(ButtonState.NONE, sNone);
 		setStateSprite(ButtonState.HOVERED, sHover);
 		setStateSprite(ButtonState.PRESSED, sPressed);
 		
-		GSprite tIcon = new GSprite(img);
+		GSprite tIcon = new GSprite(image);
 		tIcon.setScale(0.8);
 		addAtCenter(tIcon);
 		
-		addListener(new ButtonListener()
-		{
+		towerListen(tn);
+	}
+	
+	public Tile(Image image) {
+		setSize(90,90);
+		
+		GSprite sNone = new GSprite(ImageCache.forClass(TowerGame.class).get("buttons/tbn.png"));
+		GSprite sHover = new GSprite(ImageCache.forClass(TowerGame.class).get("buttons/tbh.png"));
+		GSprite sPressed = new GSprite(ImageCache.forClass(TowerGame.class).get("buttons/tbp.png"));
+		
+		setStateSprite(ButtonState.NONE, sNone);
+		setStateSprite(ButtonState.HOVERED, sHover);
+		setStateSprite(ButtonState.PRESSED, sPressed);
+		
+		GSprite tIcon = new GSprite(image);
+		tIcon.setScale(0.8);
+		addAtCenter(tIcon);
+		
+		enemyListen();
+	}
+	
+	public void towerListen(final int tn) {
+		addListener(new ButtonListener() {
 			@Override
-			public void mouseClicked(Context context)
-			{
-				getFirstAncestorOf(TGLevelOneView.class).initializeTurret(turretNumber);
+			public void mouseClicked(Context context) {
+				getFirstAncestorOf(TGLevelOneView.class).initializeTurret(tn);
+				//getFirstAncestorOf(TGLevelOneView.class).initializeEnemy();
+				
+				
 			}
 		});
 	}
-
+	
+	public void enemyListen() {
+		addListener(new ButtonListener() {
+			@Override
+			public void mouseClicked(Context context) {
+				getFirstAncestorOf(TGLevelOneView.class).initializeEnemy();
+				
+				
+			}
+		});
+	}
 }
+ 

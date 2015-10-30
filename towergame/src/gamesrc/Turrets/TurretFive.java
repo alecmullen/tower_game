@@ -1,18 +1,20 @@
-package gamesrc.turrets;
+package gamesrc.Turrets;
 
 import java.awt.Image;
 
 import gamesrc.Bullet;
+import gamesrc.Turret;
 import jgame.ImageCache;
 
-public class TurretThree extends Turret {
-	public TurretThree(Image image)
-	{
+public class TurretFive extends Turret {
+	public TurretFive(Image image) {
 		super(image);
+	
 	}
+
 	@Override
 	public Bullet createBullet() {
-		return new Bullet(ImageCache.getImage("bullets/b3.png"));
+		return new Bullet(ImageCache.getImage("bullets/b5.png"));
 	}
 
 	@Override
