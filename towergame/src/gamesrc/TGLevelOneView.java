@@ -82,7 +82,8 @@ public class TGLevelOneView extends GContainer {
 					else turretList.get(i).face(getWidth()/2,getHeight()/2);
 					//turretList.get(i).setRotation(turretList.get(i).getRotation());
 					if (enemyList.size() > 0) {
-						if (enemyList.get(i).isDead()) enemyList.remove(i);
+						for (int j = 0; j < enemyList.size(); j++)
+						if (enemyList.get(j).isDead()) enemyList.remove(j);
 					} else {
 						break;
 					}
