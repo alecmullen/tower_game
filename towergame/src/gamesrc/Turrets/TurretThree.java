@@ -9,6 +9,7 @@ import jgame.ImageCache;
 public class TurretThree extends Turret {
 	public TurretThree(Image image) {
 		super(image);
+		range = 250;
 	
 	}
 
@@ -19,6 +20,6 @@ public class TurretThree extends Turret {
 
 	@Override
 	public double getBulletSpeed() {
-		return 100;
+		return 30;
 	}
 }

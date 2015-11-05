@@ -9,6 +9,7 @@ import jgame.ImageCache;
 public class TurretFive extends Turret {
 	public TurretFive(Image image) {
 		super(image);
+		range = 250;
 	
 	}
 

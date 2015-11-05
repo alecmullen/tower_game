@@ -10,7 +10,7 @@ public class TurretOne extends Turret {
 
 	public TurretOne(Image image) {
 		super(image);
-		range = 50;
+		range = 250;
 	}
 
 	@Override
