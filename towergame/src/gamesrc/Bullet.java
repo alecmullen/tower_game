@@ -5,16 +5,13 @@ import java.awt.Image;
 import jgame.GSprite;
 import jgame.listener.BoundaryRemovalListener;
 
-public class Bullet extends GSprite {
-	private int damage = 10;
-	public Bullet(Image image) {
+public abstract class Bullet extends GSprite {
+	public Bullet(Image image, int damage) {
 		super(image);
+		setDamage(damage);
 		addListener(new BoundaryRemovalListener());
 	}
 
-	public int getDamage() {
-		// TODO Auto-generated method stub
-		return damage;
-	}
-
+	public abstract int getDamage();
+	public abstract void setDamage(int damage);
 }
