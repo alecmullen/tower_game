@@ -36,7 +36,6 @@ public  class Enemy extends GSprite {
 	
 	public void hit(Bullet b1) {
 		health = health - b1.getDamage();
-		
 	}
 	
 	public void removeEnemy() {
@@ -47,5 +46,4 @@ public  class Enemy extends GSprite {
 		if (health <= 0) return true;
 		return false;
 	}
-
 }

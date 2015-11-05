@@ -11,10 +11,8 @@ public class Bullet extends GSprite {
 		super(image);
 		addListener(new BoundaryRemovalListener());
 	}
-
 	public int getDamage() {
 		// TODO Auto-generated method stub
 		return damage;
 	}
-
 }
