@@ -4,7 +4,7 @@ import java.awt.Image;
 
 import gamesrc.Bullet;
 import gamesrc.Turret;
-import jgame.ImageCache;
+import gamesrc.Bullets.BulletThree;
 
 public class TurretThree extends Turret {
 	public TurretThree(Image image) {
@@ -15,7 +15,7 @@ public class TurretThree extends Turret {
 
 	@Override
 	public Bullet createBullet() {
-		return new Bullet(ImageCache.getImage("bullets/b3.png"));
+		return new BulletThree();
 	}
 
 	@Override
