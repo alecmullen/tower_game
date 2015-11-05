@@ -43,13 +43,13 @@ public class TGMenuView extends GContainer{
 		add(play_btn);
 		play_btn.add(tIcon);
 		
-		info_btn.setLocation(100, 300);
+		info_btn.setLocation(300, 300);
 		tIcon.setAnchorTopLeft();
 		//info_btn.setAnchorCenter();
 		add(info_btn);
 		info_btn.add(tIcon);
 		
-		quit_btn.setLocation(100, 500);
+		quit_btn.setLocation(500, 500);
 		tIcon.setAnchorTopLeft();
 		//quit_btn.setAnchorCenter();
 		add(quit_btn);
