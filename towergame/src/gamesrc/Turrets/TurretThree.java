@@ -9,7 +9,6 @@ import gamesrc.Bullets.BulletThree;
 public class TurretThree extends Turret {
 	public TurretThree(Image image) {
 		super(image);
-		range = 250;
 	
 	}
 
@@ -20,6 +19,6 @@ public class TurretThree extends Turret {
 
 	@Override
 	public double getBulletSpeed() {
-		return 30;
+		return 100;
 	}
 }

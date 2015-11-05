@@ -79,5 +79,4 @@ public abstract class Turret extends GSprite {
 		this.bulletList.add(b);
 		
 	}
-
 }

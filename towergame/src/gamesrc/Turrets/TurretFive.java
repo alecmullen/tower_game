@@ -9,7 +9,6 @@ import gamesrc.Bullets.BulletFive;
 public class TurretFive extends Turret {
 	public TurretFive(Image image) {
 		super(image);
-		range = 250;
 	
 	}
 
